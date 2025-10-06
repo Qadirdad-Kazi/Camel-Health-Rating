@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-camel-500 hover:bg-camel-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-camel-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-camel-500 text-camel-500 hover:bg-camel-500 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-camel-500 focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-camel-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100;
+  }
+  
+  .rating-star {
+    @apply text-yellow-400;
+  }
+  
+  .rating-star-empty {
+    @apply text-gray-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-camel-500 to-camel-700 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-camel {
+    @apply bg-gradient-to-br from-camel-400 via-camel-500 to-camel-600;
+  }
+  
+  .bg-gradient-desert {
+    @apply bg-gradient-to-br from-desert-300 via-desert-400 to-desert-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-camel-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-camel-400;
+}
+
+/* Loading animation */
+.loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #e69400;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Image upload area */
+.upload-area {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center transition-colors duration-200;
+}
+
+.upload-area:hover {
+  @apply border-camel-400 bg-camel-50;
+}
+
+.upload-area.dragover {
+  @apply border-camel-500 bg-camel-100;
+}
+
+/* Feature badges */
+.feature-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.feature-badge.excellent {
+  @apply bg-green-100 text-green-800;
+}
+
+.feature-badge.good {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.feature-badge.fair {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.feature-badge.poor {
+  @apply bg-red-100 text-red-800;
+}
+
+.feature-badge.high {
+  @apply bg-green-100 text-green-800;
+}
+
+.feature-badge.average {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.feature-badge.low {
+  @apply bg-red-100 text-red-800;
+}
+
+.feature-badge.very_high {
+  @apply bg-emerald-100 text-emerald-800;
+}
